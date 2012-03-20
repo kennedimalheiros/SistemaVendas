@@ -5,6 +5,7 @@
 package br.edu.fasa.vendas.domainmodel;
 
 import java.util.Date;
+import java.util.List;
 
 /**
  *
@@ -15,6 +16,7 @@ public class Venda {
     private int cod;
     private Cliente cliente;
     private Date data;
+    private List<VendaItem> itens;
 
     public void Vendas() {
     }
@@ -41,5 +43,13 @@ public class Venda {
 
     public void setData(Date data) {
         this.data = data;
+    }
+
+    public List<VendaItem> getItens() {
+        return itens;
+    }
+
+    public void setItens(List<VendaItem> itens) {
+        this.itens = itens;
     }
 }
