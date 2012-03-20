@@ -10,7 +10,7 @@ import java.util.Date;
  *
  * @author www
  */
-public class Vendas {
+public class Venda {
 
     private int cod;
     private Cliente cliente;
