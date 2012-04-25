@@ -4,15 +4,26 @@
  */
 package br.edu.fasa.vendas.domainmodel;
 
+import javax.persistence.*;
+
 /**
  *
  * @author www
  */
+@Entity
+@Table (name="produtos")
 public class Produto {
 
+    @Id
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
+    @Column (name="cod")
     private int cod;
+    
+    @Column (name="nome", length=100, nullable=false)
     private String nome;
+    @Column (name="valor", nullable=false)
     private float valor;
+    @Column (name="estoque", nullable=false)
     private int estoque;
 
     public void Produto() {
